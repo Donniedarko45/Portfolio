@@ -6,7 +6,7 @@
     "dev": "next dev",
     "sync": "browser-sync start --proxy 'localhost:3000' --files 'pages/**/*, components/**/*'",
     "start": "next start",
-  "build": "next build --skip-lint --skip-types",
+  "build": "next build ",
     "lint": "next lint"
   },
   "dependencies": {
