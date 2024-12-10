@@ -8,7 +8,7 @@ export const DATA = {
   location: "Dehradun, India",
   locationLink: "https://www.google.com/maps/place/dehradun",
   description:
-    "Loves Software Engineer. I love building things and helping people.",
+    "Loves Software Engineer. I love building things and tweaking things.",
   summary:
     "I am a software engineer who loves building things and helping people. i have experience in building web development and intrest in Devops and GenAI. I am passionate about open source and building developer tools. I am currently working on building a new startup.",
   avatarUrl: "/me.png",
@@ -102,32 +102,27 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Portfolio",
+      href: "",
+      dates: "December 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Designed and developed my personal portfolio website to showcase my work and projects.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
-        "Stripe",
         "Shadcn UI",
         "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://github.com/Donniedarko45/Portfolio",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image: "/port.png",
     },
     {
       title: "Agro AI",
@@ -139,27 +134,19 @@ export const DATA = {
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "Python",
+        "Sqlite",
         "TailwindCSS",
-        "Stripe",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/Donniedarko45/weather-app",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/agro.png",
     },
     {
       title: "Food Villa",
@@ -171,18 +158,12 @@ export const DATA = {
       technologies: ["React.js", "Javascript", "TailwindCSS"],
       links: [
         {
-          type: "Website",
-          href: "https://github.com/Donniedarko45/React/tree/main",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/food.png",
     },
     {
       title: "Youtube-Backend",
@@ -191,27 +172,15 @@ export const DATA = {
       active: true,
       description:
         "Developed a backend for a youtube clone using Express.js,Mongo and Jwt token.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
+      technologies: ["Javascript", "TailwindCSS"],
       links: [
         {
           type: "Website",
-          href: "https://automatic.chat",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      image: "/yt.png",
     },
   ],
   hackathons: [
@@ -222,8 +191,13 @@ export const DATA = {
       description:
         "Developed an AI model which predicts the crop yield of a farm using satellite imagery and weather data.",
       image: "/agro.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Donniedarko45/weather-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
     },
   ],
 } as const;
