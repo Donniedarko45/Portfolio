@@ -126,7 +126,7 @@ export const DATA = {
     },
     {
       title: "Agro AI",
-      href: "https://magicui.design",
+      href: "https://github.com/Donniedarko45/weather-app",
       dates: "June 2023 - Present",
       active: true,
       description:
@@ -150,7 +150,7 @@ export const DATA = {
     },
     {
       title: "Food Villa",
-      href: "https://llm.report",
+      href: "https://github.com/Donniedarko45/React",
       dates: "May 2024 - September 2024",
       active: true,
       description:
