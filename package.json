@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-     "build": "pnpm build || true",
     "sync": "browser-sync start --proxy 'localhost:3000' --files 'pages/**/*, components/**/*'",
+    "build": "next build",
     "start": "next start",
+    "build": "pnpm install --no-frozen-lockfile && next build",
     "lint": "next lint"
   },
   "dependencies": {
