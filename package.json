@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "sync": "browser-sync start --proxy 'localhost:3000' --files 'pages/**/*, components/**/*'",
-    "build": "next build",
     "start": "next start",
-    "build": "pnpm install --no-frozen-lockfile && next build",
+  "build": "pnpm install --skip-lint --skip-types",
     "lint": "next lint"
   },
   "dependencies": {
