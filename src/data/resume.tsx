@@ -13,16 +13,17 @@ export const DATA = {
     "I am a software engineer who loves building things and helping people. i have experience in building web development and intrest in Devops and GenAI. I am passionate about open source and building developer tools. I am currently working on building a new startup.",
   avatarUrl: "/me.png",
   skills: [
+    "Javascript",
+    "Prisma",
     "React",
     "Next.js",
     "Typescript",
+    "Express.js",
     "Node.js",
     "Python",
-    "Go",
+    "Sql",
     "Postgres",
     "Docker",
-    "Kubernetes",
-    "Java",
     "C++",
   ],
   navbar: [
@@ -129,7 +130,7 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Magic UI",
+      title: "Agro AI",
       href: "https://magicui.design",
       dates: "June 2023 - Present",
       active: true,
@@ -161,27 +162,17 @@ export const DATA = {
       video: "https://cdn.magicui.design/bento-grid.mp4",
     },
     {
-      title: "llm.report",
+      title: "Food Villa",
       href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      dates: "May 2024 - September 2024",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
+        "Developed a platform for restaurants to accept online orders and manage their menu.",
+      technologies: ["React.js", "Javascript", "TailwindCSS"],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "https://github.com/Donniedarko45/React/tree/main",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -194,12 +185,12 @@ export const DATA = {
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "Youtube-Backend",
+      href: "",
+      dates: "April 2024 - July 2024",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Developed a backend for a youtube clone using Express.js,Mongo and Jwt token.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -230,8 +221,7 @@ export const DATA = {
       location: "Dehradun, Uttrakhand",
       description:
         "Developed an AI model which predicts the crop yield of a farm using satellite imagery and weather data.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+      image: "/agro.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
