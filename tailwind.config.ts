@@ -60,6 +60,9 @@ const config = {
       },
     },
     extend: {
+      textDecorationStyle: {
+        wavy: "wavy",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
