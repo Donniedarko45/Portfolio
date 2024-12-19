@@ -9,7 +9,40 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+import { IconCloud } from "@/components/magicui/interactiveCloud";
+
 const BLUR_FADE_DELAY = 0.04;
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+  "neovim",
+  "c",
+  "c++",
+  "python",
+];
 
 export default function Page() {
   return (
@@ -103,6 +136,7 @@ export default function Page() {
           ))}
         </div>
       </section>
+      {/*
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -117,6 +151,15 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      */}
+      <section id="skill">
+        <h2 className="text-xl font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
+          Skills
+        </h2>
+        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-20 pb-20 pt-8 ">
+          <IconCloud iconSlugs={slugs} />
         </div>
       </section>
       <section id="projects">
@@ -168,8 +211,10 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                <h2 className="text-3xl font-bold  tracking-tighter sm:text-5xl">
+                  <span style={{ backgroundColor: "#5F6062" }}>
+                    I like building things
+                  </span>
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I attended 3+ hackathons. People from around the country would
