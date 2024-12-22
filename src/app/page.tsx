@@ -64,9 +64,15 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              <Avatar className="size-28 border-4 border-gray-300 shadow-lg rounded-full flex items-center justify-center overflow-hidden">
+                <AvatarImage
+                  alt={DATA.name}
+                  src={DATA.avatarUrl}
+                  className="w-full h-full object-cover"
+                />
+                <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full">
+                  {DATA.initials}
+                </AvatarFallback>
               </Avatar>
             </BlurFade>
           </div>
