@@ -56,21 +56,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased  max-w-2xl mx-auto py-12 sm:py-24 px-6",
-            fontSans.variable,
-          )}
-        >
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased  max-w-2xl mx-auto py-12 sm:py-24 px-6",
+          fontSans.variable,
+        )}
+      >
+        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
           <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider delayDuration={0}>
               {children}
               <Navbar />
             </TooltipProvider>
           </ThemeProvider>
-        </body>
-      </BackgroundLines>
+        </BackgroundLines>
+      </body>
     </html>
   );
 }
