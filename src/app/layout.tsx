@@ -62,14 +62,14 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-          <ThemeProvider attribute="class" defaultTheme="light">
-            <TooltipProvider delayDuration={0}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <TooltipProvider delayDuration={0}>
+            <BackgroundLines className="flex w-full flex-col px-4">
               {children}
               <Navbar />
-            </TooltipProvider>
-          </ThemeProvider>
-        </BackgroundLines>
+            </BackgroundLines>
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
