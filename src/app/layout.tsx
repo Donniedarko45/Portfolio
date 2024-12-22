@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
         <body
           className={cn(
