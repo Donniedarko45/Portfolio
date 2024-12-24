@@ -10,6 +10,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 import { IconCloud } from "@/components/magicui/interactiveCloud";
+import { Cover } from "../components/ui/cover";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -177,7 +178,7 @@ export default function Page() {
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  <Cover> Check out my latest work </Cover>
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
@@ -218,9 +219,7 @@ export default function Page() {
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold  tracking-tighter sm:text-5xl">
-                  <span style={{ backgroundColor: "#5F6062" }}>
-                    I like building things
-                  </span>
+                  <span>I like building things</span>
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I attended 3+ hackathons. People from around the country would
