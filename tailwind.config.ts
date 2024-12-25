@@ -60,6 +60,30 @@ const config = {
       },
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            pre: {
+              overflow: 'auto',
+              maxWidth: '100%',
+              padding: '1rem',
+              backgroundColor: theme('colors.black.800'),
+              color: theme('colors.black.200'),
+              code: {
+                backgroundColor: 'transparent',
+                borderWidth: '0',
+                borderRadius: '0',
+                padding: '0',
+                fontWeight: '400',
+                color: 'inherit',
+                fontSize: 'inherit',
+                fontFamily: 'inherit',
+                lineHeight: 'inherit',
+              },
+            },
+          },
+        },
+      }),
       textDecorationStyle: {
         wavy: "wavy",
       },

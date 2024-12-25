@@ -2,20 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add these styles to your global CSS file or component-specific CSS file */
-.prose pre {
-  overflow: auto;
-  max-width: 100%;
-  white-space: pre-wrap; /* Ensure long lines wrap */
-}
 
-.prose code {
-  display: block;
-  padding: 1em;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  overflow-x: auto;
-}
+
+
 
 @layer base {
     :root {
@@ -192,5 +181,86 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   font-family: 'Georgia', serif;
   text-decoration: underline;
   color: #32cd32; /* LimeGreen color */
+}
+
+/* Fix code block scrolling and copying */
+pre {
+  position: relative;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  width: 100%;
+}
+
+/* Enable text selection */
+pre, code {
+  user-select: text;
+  -webkit-user-select: text;
+}
+/* Style the scrollbar */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: var(--muted-foreground);
+  position: sticky;
+  left: 0;
+  background: inherit;
+}
+
+/* Remove the existing line number styles that are causing the break */
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: var(--muted-foreground);
+  position: sticky;
+  left: 0;
+}
+
+/* Optional: Add a subtle background to distinguish wrapped lines better */
+pre [data-line] {
+  display: inline-block;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+/* Ensure code blocks maintain proper spacing */
+.prose pre {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
 }
 
