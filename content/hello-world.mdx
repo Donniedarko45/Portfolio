@@ -4,8 +4,64 @@ publishedAt: "2024-11-18"
 summary: "My first post on my new blog."
 ---
 
-Hi there!
+React js is a library which is used for building UI components.with the help of react-js we can easily make websites and the cody is easy to understand.
+<mark>why to use React js</mark>
 
 ```jsx
- console.log("Hii");
+ // use-state
+ import { useEffect, useState } from "react";
+
+function App() {
+  return (
+    <>
+      <Counter />
+    </>
+  );
+}
+function Counter() {
+  /* function IncreaseCount() {
+    document.getElementById("num").innerHTML++;
+    but this is not a good way
+  }
+*/
+  // we will do this by using state=> react will re-render your application when u will change the state variable not the any normal varialble whenever state variable changes react will call the fxn again and again...
+  var [count, setCount] = useState(0);
+
+  function IncreaseCount() {
+    setCount((count = count + 1));
+  }
+  /*
+  // lets see what happens when we wrap the IncreaseCount fxn inside a setinterval fxn
+  setInterval(function IncreaseCount() {
+    let num = 0;
+    num++;
+    console.log(num);
+    setCount(count + 1);
+  }, 1000);
+
+  console.log("hellow");
+*/
+
+  console.log("outside a useEffect fxn");
+  // so to be safe from re-rendering again and again we will use useEffect ...
+  /*useEffect(() => {
+    setInterval(function IncreaseCount() {
+      setCount((count) => count + 1);
+    }, 1000);
+    console.log("inside a useEffect fxn");
+  }, []); // what is dependency array and how do we
+*/
+  /*function ResetCount() {
+    setCount(0);
+  }*/
+  return (
+    <>
+      <h1 id="num">{count}</h1>
+      <button onclick={IncreaseCount}>1</button>
+    </>
+  );
+}
+
+export default App;
+
 ```
