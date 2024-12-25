@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 
-
-
-
 @layer base {
     :root {
       --background: 0 0% 100%;
@@ -79,73 +76,7 @@
     }
   }
 
-  h3 code {
-    @apply !text-lg md:!text-xl;
-  }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
-  }
-   
-  pre [data-line] {
-    @apply px-4
-  }
-
-  code {
-    @apply text-sm md:text-base !leading-loose;
-  }
-  
-  pre > code {
-    counter-reset: line;
-  }
-  
-  code[data-theme*=" "],
-  code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
-  }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
-  }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
-  }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
-  }
  
-  code {
-    counter-reset: line;
-  }
- 
-  code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
- 
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 2rem;
-  text-align: right;
-  color: gray;
-}
- 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
-  width: 2rem;
-}
- 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
-  width: 3rem;
-}
 
 .font-style-1 {
   font-family: 'Arial', sans-serif;
@@ -183,84 +114,139 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   color: #32cd32; /* LimeGreen color */
 }
 
-/* Fix code block scrolling and copying */
+/* Base code block styling */
 pre {
-  position: relative;
   white-space: pre-wrap;
   word-wrap: break-word;
-  overflow-wrap: break-word;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 100%;
+  word-break: break-word;
+  padding: 1rem !important;
+  background-color: #1a1a1a !important; /* Dark background */
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
 }
 
 code {
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
   word-break: break-word;
-  width: 100%;
+  color: #e4e4e4 !important; /* Light text color */
+  @apply text-sm md:text-base !leading-loose;
 }
 
-/* Enable text selection */
+/* Syntax highlighting colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6;
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #9cdcfe;
+}
+
+/* Desktop line numbers */
+@media (min-width: 768px) {
+  code[data-line-numbers] {
+    counter-reset: line;
+  }
+
+  code[data-line-numbers] > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 2rem;
+    margin-right: 1rem;
+    text-align: right;
+    color: #6e6e6e; /* Dimmed line numbers */
+    position: sticky;
+    left: 0;
+    background: inherit;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  pre {
+    padding: 0.75rem !important;
+  }
+  
+  code {
+    font-size: 0.8rem !important;
+  }
+
+  code[data-line-numbers] > [data-line]::before {
+    display: none;
+  }
+
+  pre [data-line] {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Line padding and selection */
+pre [data-line] {
+  @apply px-4;
+}
+
 pre, code {
   user-select: text;
   -webkit-user-select: text;
 }
-/* Style the scrollbar */
+
+/* Scrollbar styling */
 pre::-webkit-scrollbar {
   height: 8px;
 }
 
-code[data-line-numbers] {
-  counter-reset: line;
-}
-
-code[data-line-numbers] > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  width: 2rem;
-  margin-right: 1rem;
-  text-align: right;
-  color: var(--muted-foreground);
-  position: sticky;
-  left: 0;
-  background: inherit;
-}
-
-/* Remove the existing line number styles that are causing the break */
-code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  width: 2rem;
-  margin-right: 1rem;
-  text-align: right;
-  color: var(--muted-foreground);
-  position: sticky;
-  left: 0;
-}
-
-/* Optional: Add a subtle background to distinguish wrapped lines better */
-pre [data-line] {
-  display: inline-block;
-  width: 100%;
-  padding: 0 1rem;
-}
-
 pre::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: #2d2d2d;
   border-radius: 4px;
-}
-
-/* Ensure code blocks maintain proper spacing */
-.prose pre {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
 }
 
 pre::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #404040;
   border-radius: 4px;
 }
-
