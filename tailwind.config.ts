@@ -60,37 +60,6 @@ const config = {
       },
     },
     extend: {
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            pre: {
-              overflow: 'auto',
-              maxWidth: '100%',
-              padding: '1rem',
-              backgroundColor: theme('colors.gray.900'),
-              color: theme('colors.gray.200'),
-              borderRadius: '0.5rem',
-              fontSize: '0.875rem', // Smaller font size for mobile
-              lineHeight: '1.5',    // Better line height for readability
-            },
-            code: {
-              backgroundColor: 'transparent',
-              borderWidth: '0',
-              borderRadius: '0',
-              padding: '0',
-              fontWeight: '400',
-              color: 'inherit',
-              fontFamily: 'inherit',
-            },
-            'code::before': {
-              content: '""',  // Remove the backtick before code
-            },
-            'code::after': {
-              content: '""',  // Remove the backtick after code
-            }
-          },
-        },
-      }),
       textDecorationStyle: {
         wavy: "wavy",
       },
