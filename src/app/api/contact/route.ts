@@ -1,12 +1,18 @@
 import { NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY is not set in environment variables");
+if (!process.env.EMAIL_USER || !process.env.EMAIL_APP_PASSWORD) {
+  throw new Error("Email configuration is missing in environment variables");
 }
 
-// Initialize SendGrid with your API key
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// Create reusable transporter object using SMTP transport
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_APP_PASSWORD,
+  },
+});
 
 export async function POST(req: Request) {
   try {
@@ -19,12 +25,12 @@ export async function POST(req: Request) {
       );
     }
 
-    const msg = {
-      to: "kartikey224252@gmail.com", // Your email
-      from: "kartikey224252@gmail.com", // Your verified SendGrid sender
-      replyTo: email, // The sender's email for replies
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New Portfolio Contact Form Message from ${email}`,
-      text: message,
+      text: `From: ${email}\n\nMessage:\n${message}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 10px;">
           <h2 style="color: #333; margin-bottom: 20px;">New Contact Form Submission</h2>
@@ -43,17 +49,17 @@ export async function POST(req: Request) {
     };
 
     try {
-      await sgMail.send(msg);
-      console.log('Email sent successfully to', msg.to);
+      await transporter.sendMail(mailOptions);
+      console.log('Email sent successfully to', process.env.EMAIL_USER);
       
       return NextResponse.json(
         { message: "Email sent successfully!" },
         { status: 200 }
       );
     } catch (sendError: any) {
-      console.error('SendGrid Error:', {
+      console.error('Nodemailer Error:', {
         message: sendError.message,
-        response: sendError.response?.body,
+        code: sendError.code,
       });
       
       return NextResponse.json(
