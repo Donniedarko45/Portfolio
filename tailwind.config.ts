@@ -65,7 +65,7 @@ const config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        Lora: ["Lora", "serif"],
+        Lora: ["Lora"],
       },
       colors: {
         border: "hsl(var(--border))",
