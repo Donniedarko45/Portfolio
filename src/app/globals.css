@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:wght@100..400&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Vibur&display=swap");
 
 @layer base {
   :root {
@@ -24,7 +24,7 @@
     --muted-foreground: 0 0% 45.1%;
 
     --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -85,11 +85,11 @@ pre {
   word-wrap: break-word;
   word-break: break-word;
   padding: 1rem !important;
-  @apply !px-0 rounded-lg overflow-x-auto py-4
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
 }
 
 pre [data-line] {
-  @apply px-4
+  @apply px-4;
 }
 
 code {
@@ -154,7 +154,7 @@ code {
   pre {
     padding: 0.75rem !important;
   }
-  
+
   code {
     font-size: 0.8rem !important;
   }
@@ -168,9 +168,9 @@ code {
   }
 }
 
-
 /* Selection */
-pre, code {
+pre,
+code {
   user-select: text;
   -webkit-user-select: text;
 }
@@ -191,45 +191,46 @@ pre::-webkit-scrollbar-thumb {
 }
 
 code[data-line-numbers-max-digits="2"] > [data-line]::before {
-width: 2rem;
+  width: 2rem;
 }
 
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
-width: 3rem;
+  width: 3rem;
 }
 
 .font-style-1 {
-font-family: 'Arial', sans-serif;
-font-weight: bold;
-color: #ff6347; /* Tomato color */
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #ff6347; /* Tomato color */
 }
 
 .font-style-2 {
-font-family: 'Courier New', monospace;
-font-style: italic;
-color: #4682b4; /* SteelBlue color */
+  font-family: "Courier New", monospace;
+  font-style: italic;
+  color: #4682b4; /* SteelBlue color */
 }
 
 .font-style-3 {
-font-family: 'Georgia', serif;
-text-decoration: underline;
-color: #32cd32; /* LimeGreen color */
+  font-family: "Georgia", serif;
+  text-decoration: underline;
+  color: #32cd32; /* LimeGreen color */
 }
 
 .font-style-hi {
-font-family: 'Arial', sans-serif;
-font-weight: bold;
-color: #ff6347; /* Tomato color */
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #ff6347; /* Tomato color */
 }
 
 .font-style-i-am {
-font-family: 'Courier New', monospace;
-font-style: italic;
-color: #4682b4; /* SteelBlue color */
+  font-family: "Courier New", monospace;
+  font-style: italic;
+  color: #4682b4; /* SteelBlue color */
 }
 
 .font-style-kartikey {
-font-family: 'Georgia', serif;
-text-decoration: underline;
-color: #32cd32; /* LimeGreen color */
+  font-family: "Georgia", serif;
+  text-decoration: underline;
+  color: #32cd32; /* LimeGreen color */
 }
+
