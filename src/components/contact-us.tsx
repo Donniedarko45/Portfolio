@@ -30,7 +30,7 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -106,9 +106,6 @@ export function ContactForm() {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
-                Please provide as much detail as possible.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}

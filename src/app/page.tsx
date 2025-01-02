@@ -1,3 +1,4 @@
+"use client";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -9,6 +10,23 @@ import Markdown from "react-markdown";
 import { ContactForm } from "../components/contact-us";
 import { IconCloud } from "@/components/magicui/interactiveCloud";
 import { Cover } from "../components/ui/cover";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from 'react';
+
+function useScrollAnimation() {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.8 } });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [controls]);
+
+  return controls;
+}
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -44,15 +62,28 @@ const slugs = [
 ];
 
 export default function Page() {
+  const scrollControls = useScrollAnimation();
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <section id="hero">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col min-h-[100dvh] space-y-10"
+    >
+      <motion.section
+        id="hero"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-2xl font-bold tracking-tighter font-Lora font-italic sm:text-4xl xl:text-5xl/none"
+                className="text-2xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -76,8 +107,15 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-      </section>
-      <section id="about">
+      </motion.section>
+      <motion.section
+        id="about"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl underline  font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
             About
@@ -88,8 +126,15 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section>
-      <section id="work">
+      </motion.section>
+      <motion.section
+        id="work"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold  underline decoration-gray-500 [text-decoration-style:wavy]">
@@ -115,8 +160,15 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
-      <section id="education">
+      </motion.section>
+      <motion.section
+        id="education"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
@@ -140,34 +192,30 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
-      {/*
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
-              Skills
-            </h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
-      <section id="skill">
+      </motion.section>
+      <motion.section
+        id="skill"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <h2 className="text-xl font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
           Skills
         </h2>
         <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-20 pb-20 pt-8 ">
           <IconCloud iconSlugs={slugs} />
         </div>
-      </section>
-      <section id="projects">
+      </motion.section>
+      <motion.section
+        id="projects"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -207,8 +255,15 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="hackathons">
+      </motion.section>
+      <motion.section
+        id="hackathons"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -248,8 +303,15 @@ export default function Page() {
             </ul>
           </BlurFade>
         </div>
-      </section>
-      <section id="contact">
+      </motion.section>
+      <motion.section
+        id="contact"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        animate={scrollControls}
+      >
         <div className="container mx-auto py-10">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
@@ -263,7 +325,8 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
-      </section>
-    </main>
+      </motion.section>
+    </motion.main>
   );
 }
+

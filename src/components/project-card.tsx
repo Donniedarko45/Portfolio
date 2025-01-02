@@ -42,13 +42,18 @@ export function ProjectCard({
 }: Props) {
   return (
     <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
+      className={cn(
+        "group flex flex-col overflow-hidden border",
+        "hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+        "transition-all duration-300 ease-out h-full",
+        "hover:-translate-y-1 hover:scale-[1.02]",
+        "bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800",
+        className
+      )}
     >
       <Link
         href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        className="block cursor-pointer overflow-hidden"
       >
         {video && (
           <video
@@ -57,7 +62,8 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top 
+              transform transition-transform duration-300 group-hover:scale-110" 
           />
         )}
         {image && (
@@ -66,14 +72,17 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-40 w-full overflow-hidden object-cover object-top 
+              transform transition-transform duration-300 group-hover:scale-110"
           />
         )}
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
+          <CardTitle className="mt-1 text-base group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            {title}
+          </CardTitle>
+          <time className="font-sans text-xs opacity-70">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
@@ -87,7 +96,8 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px]"
+                className="px-1 py-0 text-[10px] transition-all duration-300
+                  hover:scale-105 hover:shadow-md"
                 variant="secondary"
                 key={tag}
               >
@@ -102,7 +112,13 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge 
+                  key={idx} 
+                  className="flex gap-2 px-2 py-1 text-[10px]
+                    transform transition-all duration-300
+                    hover:scale-105 hover:shadow-lg
+                    hover:bg-blue-500 hover:text-white"
+                >
                   {link.icon}
                   {link.type}
                 </Badge>
