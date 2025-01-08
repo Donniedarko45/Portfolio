@@ -77,7 +77,7 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base font-sourceSerif group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <CardTitle className="mt-1 text-base font-sourceSerif group-hover:text-white-600 dark:group-hover:text-blue-400 transition-colors">
             {title}
           </CardTitle>
           <time className="font-sourceSerif text-xs opacity-70">{dates}</time>
@@ -115,7 +115,7 @@ export function ProjectCard({
                   className="flex gap-2 px-2 py-1 text-[10px]
                     transform transition-all duration-300
                     hover:scale-105 hover:shadow-lg
-                    hover:bg-blue-500 hover:text-white"
+                    hover:bg-black-500 hover:text-white"
                 >
                   {link.icon}
                   {link.type}
