@@ -98,7 +98,7 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm  font-mono"
+              className="mt-2 text-xs sm:text-sm text-muted-foreground  font-mono"
             >
               {description}
             </motion.div>
