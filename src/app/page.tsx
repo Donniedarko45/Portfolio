@@ -112,7 +112,7 @@ export default function Page() {
         animate={scrollControls}
       >
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl underline font-playwriteFR  font-sb underline decoration-gray-500 [text-decoration-style:wavy]">
+          <h2 className="text-xl underline font-playwriteFR  font-semibold underline decoration-gray-500 [text-decoration-style:wavy]">
             About
           </h2>
         </BlurFade>
@@ -132,7 +132,7 @@ export default function Page() {
       >
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-2xl font-sb  font-playwriteFR  underline decoration-gray-500 [text-decoration-style:wavy]">
+            <h2 className="text-xl font-semibold  font-playwriteFR  underline decoration-gray-500 [text-decoration-style:wavy]">
               Work Experience
             </h2>
           </BlurFade>
