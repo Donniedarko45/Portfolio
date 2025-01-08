@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Loves Software Engineer. I love building things and tweaking things.",
   summary:
-    "I am a software engineer who loves building things and helping people. I have experience in building web development and intrest in Devops and GenAI. I am passionate about open source and building developer tools. I am currently working on building a new startup.",
+    "I am a software engineer who loves building things and helping people. I have experience in building Full stack websites and intrest in Devops and GenAI. I am passionate about open source and building developer tools. I am currently working on building a new startup.",
   avatarUrl: "/me.png",
   skills: [
     "Javascript",

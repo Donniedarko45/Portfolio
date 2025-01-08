@@ -122,9 +122,13 @@ export default function Page() {
           </h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full font-jetbrains text-normaltext-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full font-mono text-normal text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
+          <div className="prose max-w-full font-mono text-normal py-11  dark:prose-invert">
+            🌱 I’m currently learning about DevOps and GenAI.
+            <hr />
+          </div>
         </BlurFade>
       </motion.section>
       <motion.section
