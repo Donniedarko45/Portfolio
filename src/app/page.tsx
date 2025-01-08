@@ -221,7 +221,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold font-jetbrains  tracking-tighter sm:text-5xl">
                   <Cover> Check out my latest work </Cover>
                 </h2>
-                <p className="text-muted-foreground font-jetbrains  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground font-mono  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
                   favorites.
