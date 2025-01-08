@@ -78,7 +78,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="font-sourceSerif space-y-8"
+        className=" font-jetbrains space-y-8"
       >
         <FormField
           control={form.control}
@@ -89,7 +89,7 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="your@email.com" {...field} />
               </FormControl>
-              <FormDescription>
+              <FormDescription className=" font-jetbrains">
                 I'll never share your email with anyone else.
               </FormDescription>
               <FormMessage />
@@ -101,11 +101,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Message</FormLabel>
+              <FormLabel className=" font-jetbrains">Your Message</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Type your message here."
-                  className="resize-none"
+                  className="resize-none  font-jetbrains"
                   {...field}
                 />
               </FormControl>
