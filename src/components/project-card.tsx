@@ -45,16 +45,14 @@ export function ProjectCard({
       className={cn(
         "group flex flex-col overflow-hidden border",
         "hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+        "font-sourceSerif text-muted-foreground dark:text-muted-invert",
         "transition-all duration-300 ease-out h-full",
         "hover:-translate-y-1 hover:scale-[1.02]",
         "bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800",
-        className
+        className,
       )}
     >
-      <Link
-        href={href || "#"}
-        className="block cursor-pointer overflow-hidden"
-      >
+      <Link href={href || "#"} className="block cursor-pointer overflow-hidden">
         {video && (
           <video
             src={video}
@@ -63,7 +61,7 @@ export function ProjectCard({
             muted
             playsInline
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top 
-              transform transition-transform duration-300 group-hover:scale-110" 
+              transform transition-transform duration-300 group-hover:scale-110"
           />
         )}
         {image && (
@@ -79,19 +77,19 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <CardTitle className="mt-1 text-base font-sourceSerif group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {title}
           </CardTitle>
-          <time className="font-sans text-xs opacity-70">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
+          <time className="font-sourceSerif text-xs opacity-70">{dates}</time>
+          <div className="hidden font-sourceSerif text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full font-sourceSerif  text-pretty text-xs text-muted-foreground dark:prose-invert">
             {description}
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+      <CardContent className="mt-auto flex font-sourceSerif flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
@@ -107,13 +105,13 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2">
+      <CardFooter className="px-2 pb-2 font-sourceSerif">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge 
-                  key={idx} 
+                <Badge
+                  key={idx}
                   className="flex gap-2 px-2 py-1 text-[10px]
                     transform transition-all duration-300
                     hover:scale-105 hover:shadow-lg

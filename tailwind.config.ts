@@ -64,8 +64,12 @@ const config = {
         wavy: "wavy",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        Lora: ["Lora"],
+        chewy: ["Chewy", "cursive"],
+        jetbrains: ["JetBrains Mono", "monospace"],
+        playwriteFR: ['"Playwrite FR Moderne"'],
+        playwriteGB: ['"Playwrite GB S"'],
+        sourceSerif: ['"Source Serif 4"', "serif"],
+        vibur: ["Vibur", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -108,52 +112,55 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center',
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
           },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center',
-          },
-        },
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center',
-          },'50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center',
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
           },
         },
-        'text-shimmer': {
-          '0%': {
-            'background-position': '0 0',
+        "gradient-xy": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "left center",
           },
-          '100%': {
-            'background-position': '-200% 0',
-          },
-        }, float: {
-          '0%, 100%': {
-            transform: 'translateY(0)',
-          },
-          '50%': {
-            transform: 'translateY(-10px)',
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
           },
         },
-        'background-shine': {
-          from: { backgroundPosition: '0 0' },
-          to: { backgroundPosition: '-200% 0' }
-        },
-        'card-hover': {
-          '0%': {
-            transform: 'translateY(0) scale(1)',
-            boxShadow: '0 0 0 rgba(0,0,0,0)',
+        "text-shimmer": {
+          "0%": {
+            "background-position": "0 0",
           },
-          '100%': {
-            transform: 'translateY(-4px) scale(1.02)',
-            boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)',
+          "100%": {
+            "background-position": "-200% 0",
+          },
+        },
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "background-shine": {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        "card-hover": {
+          "0%": {
+            transform: "translateY(0) scale(1)",
+            boxShadow: "0 0 0 rgba(0,0,0,0)",
+          },
+          "100%": {
+            transform: "translateY(-4px) scale(1.02)",
+            boxShadow:
+              "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)",
           },
         },
         "accordion-down": {
@@ -166,14 +173,14 @@ const config = {
         },
       },
       animation: {
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'gradient-xy': 'gradient-xy 15s ease infinite',
-        'text-shimmer': 'text-shimmer 2.5s ease-out infinite alternate',
-        'float': 'float 6s ease-in-out infinite',
-        'background-shine': 'background-shine 2s linear infinite',
+        "gradient-x": "gradient-x 15s ease infinite",
+        "gradient-xy": "gradient-xy 15s ease infinite",
+        "text-shimmer": "text-shimmer 2.5s ease-out infinite alternate",
+        float: "float 6s ease-in-out infinite",
+        "background-shine": "background-shine 2s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'card-hover': 'card-hover 0.3s ease-in-out',
+        "card-hover": "card-hover 0.3s ease-in-out",
       },
     },
   },

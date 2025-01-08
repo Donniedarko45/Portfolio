@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-
+import Head from "next/head";
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
@@ -43,11 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,9 +53,14 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          inter.className,
         )}
       >
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Chewy&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+GB+S:wght@100..400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Vibur&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
