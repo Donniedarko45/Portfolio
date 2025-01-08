@@ -81,15 +81,15 @@ export function ProjectCard({
             {title}
           </CardTitle>
           <time className="font-sourceSerif text-xs opacity-70">{dates}</time>
-          <div className="hidden font-sourceSerif text-xs underline print:visible">
+          <div className="hidden  font-jetbrains text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full font-sourceSerif  text-pretty text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full  font-jetbrains text-pretty text-xs text-muted-foreground dark:prose-invert">
             {description}
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex font-sourceSerif flex-col px-2">
+      <CardContent className="mt-auto flex  font-jetbrains flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
@@ -105,7 +105,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2 font-sourceSerif">
+      <CardFooter className="px-2 pb-2  font-jetbrains">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (

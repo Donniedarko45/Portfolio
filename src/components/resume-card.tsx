@@ -44,7 +44,7 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex font-sourceSerif">
+      <Card className="flex  font-jetbrains">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
@@ -58,7 +58,7 @@ export const ResumeCard = ({
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex font-sourceSerif items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex  font-jetbrains items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
@@ -84,7 +84,9 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && (
+              <div className=" font-jetbrains text-xs">{subtitle}</div>
+            )}
           </CardHeader>
           {description && (
             <motion.div
@@ -98,7 +100,7 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm font-sourceSerif"
+              className="mt-2 text-xs sm:text-sm  font-jetbrains"
             >
               {description}
             </motion.div>

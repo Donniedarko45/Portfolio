@@ -78,7 +78,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="font-vibur  text-3xl font-semibold tracking-tighter sm:text-4xl xl:text-5xl/none"
+                className="font-jetbrains text-3xl font-semibold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -112,7 +112,7 @@ export default function Page() {
         animate={scrollControls}
       >
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl underline font-playwriteFR  font-semibold underline decoration-gray-500 [text-decoration-style:wavy]">
+          <h2 className="text-xl underline font-jetbrains  font-semibold underline decoration-gray-500 [text-decoration-style:wavy]">
             About
           </h2>
         </BlurFade>
@@ -132,7 +132,7 @@ export default function Page() {
       >
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-semibold  font-playwriteFR  underline decoration-gray-500 [text-decoration-style:wavy]">
+            <h2 className="text-xl font-semibold  font-jetbrains  underline decoration-gray-500 [text-decoration-style:wavy]">
               Work Experience
             </h2>
           </BlurFade>
@@ -196,7 +196,7 @@ export default function Page() {
         viewport={{ once: true, amount: 0.3 }}
         animate={scrollControls}
       >
-        <h2 className="text-xl font-bold font-sourceSerif  underline decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-xl font-bold font-jetbrains  underline decoration-gray-500 [text-decoration-style:wavy]">
           Skills
         </h2>
         <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-20 pb-20 pt-8 ">
@@ -215,13 +215,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block font-sourceSerif  rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
-                <h2 className="text-3xl font-bold font-sourceSerif  tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold font-jetbrains  tracking-tighter sm:text-5xl">
                   <Cover> Check out my latest work </Cover>
                 </h2>
-                <p className="text-muted-foreground font-sourceSerif  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground font-jetbrains  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
                   favorites.
@@ -229,7 +229,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 font-sourceSerif  gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 font-jetbrains  gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
@@ -263,13 +263,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block font-sourceSerif  rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold  tracking-tighter sm:text-5xl">
                   <span>I like building things</span>
                 </h2>
-                <p className="text-muted-foreground font-sourceSerif  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground font-jetbrains md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I attended 3+ hackathons. People from around the country would
                   come together and build incredible things in 2-3 days. It was
                   eye-opening to see the endless possibilities brought to life
@@ -279,7 +279,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 font-sourceSerif divide-y divide-dashed border-l">
+            <ul className="mb-4 ml-4 font-jetbrainsdivide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade
                   key={project.title + project.dates}
@@ -310,10 +310,10 @@ export default function Page() {
         <div className="container mx-auto py-10">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block font-sourceSerif rounded-lg bg-foreground text-background px-3 py-1 text-sm text-center">
+              <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm text-center">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter font-sourceSerif sm:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-jetbrainssm:text-5xl">
                 Get in Touch
               </h2>
               <ContactForm />
