@@ -89,16 +89,17 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border-4 border-orange-500 shadow-lg rounded-full flex items-center justify-center overflow-hidden">
+              <Avatar className="size-28 border-4 border-gray-400 shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 animate-glow border-4 border-transparent rounded-full"></div>
                 <AvatarImage
                   alt={DATA.name}
                   src={DATA.avatarUrl}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover z-10"
                 />
-                <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full">
+                <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full z-10">
                   {DATA.initials}
                 </AvatarFallback>
-              </Avatar>
+              </Avatar>{" "}
             </BlurFade>
           </div>
         </div>
@@ -221,7 +222,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold font-jetbrains  tracking-tighter sm:text-5xl">
                   <Cover> Check out my latest work </Cover>
                 </h2>
-                <p className="text-muted-foreground font-mono  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground font-mono  ">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
                   favorites.
@@ -269,7 +270,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold  tracking-tighter sm:text-5xl">
                   <span>I like building things</span>
                 </h2>
-                <p className="text-muted-foreground font-jetbrains md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground font-mono">
                   I attended 3+ hackathons. People from around the country would
                   come together and build incredible things in 2-3 days. It was
                   eye-opening to see the endless possibilities brought to life
