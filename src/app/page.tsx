@@ -89,13 +89,17 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border-4 border-gray-400 shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
-                <div className="absolute inset-0 animate-glow border-4 border-transparent rounded-full"></div>
+              <Avatar className="size-28 border-4 border-gray-500 shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
+                {/* Ripple Effect */}
+                <div className="absolute inset-0 animate-ripple rounded-full border-4 border-gray-500/50"></div>
+
+                {/* Inner Avatar Image */}
                 <AvatarImage
                   alt={DATA.name}
                   src={DATA.avatarUrl}
                   className="w-full h-full object-cover z-10"
                 />
+                {/* Fallback for Initials */}
                 <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full z-10">
                   {DATA.initials}
                 </AvatarFallback>

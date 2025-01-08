@@ -113,9 +113,9 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        glow: {
-          "0%, 100%": { boxShadow: "0 0 10px rgba(255, 165, 0, 0.5)" },
-          "50%": { boxShadow: "0 0 20px rgba(255, 165, 0, 1)" },
+        ripple: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "100%": { transform: "scale(2)", opacity: "0" },
         },
 
         "gradient-x": {
@@ -179,7 +179,7 @@ const config = {
         },
       },
       animation: {
-        glow: "glow 1.5s infinite",
+        " ripple": "ripple 2s infinite",
         "gradient-x": "gradient-x 15s ease infinite",
         "gradient-xy": "gradient-xy 15s ease infinite",
         "text-shimmer": "text-shimmer 2.5s ease-out infinite alternate",
