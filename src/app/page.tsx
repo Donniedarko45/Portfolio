@@ -117,7 +117,7 @@ export default function Page() {
           </h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full font-jetbrains text-xl text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full font-jetbrains text-normaltext-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
