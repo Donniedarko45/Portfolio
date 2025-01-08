@@ -90,16 +90,13 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border-4 border-gray-500 shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
-                {/* Ripple Effect */}
                 <div className="absolute inset-0 animate-ripple rounded-full border-4 border-gray-500/50"></div>
 
-                {/* Inner Avatar Image */}
                 <AvatarImage
                   alt={DATA.name}
                   src={DATA.avatarUrl}
                   className="w-full h-full object-cover z-10"
                 />
-                {/* Fallback for Initials */}
                 <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full z-10">
                   {DATA.initials}
                 </AvatarFallback>
@@ -125,7 +122,8 @@ export default function Page() {
           <Markdown className="prose max-w-full font-mono text-normal text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
-          <div className="prose max-w-full font-mono text-normal py-11  dark:prose-invert">
+          <br />
+          <div className="prose max-w-full py-10px  font-mono text-normal dark:prose-invert">
             🌱 I’m currently learning about DevOps and GenAI.
             <hr />
           </div>

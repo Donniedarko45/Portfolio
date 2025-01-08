@@ -1,5 +1,4 @@
 "use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -61,7 +60,6 @@ export function ContactForm() {
         description: "Thank you for your message. I'll get back to you soon.",
       });
 
-      // Reset form
       form.reset();
     } catch (error) {
       toast({
@@ -78,7 +76,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" font-jetbrains space-y-8"
+        className=" font-mono space-y-8"
       >
         <FormField
           control={form.control}
@@ -101,11 +99,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className=" font-jetbrains">Your Message</FormLabel>
+              <FormLabel className=" font-mono">Your Message</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Type your message here."
-                  className="resize-none  font-jetbrains"
+                  className="resize-none  font-mono"
                   {...field}
                 />
               </FormControl>

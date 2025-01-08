@@ -54,7 +54,7 @@ export default function RootLayout({
           "min-h-screen bg-background antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
