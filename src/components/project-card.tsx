@@ -45,7 +45,7 @@ export function ProjectCard({
       className={cn(
         "group flex flex-col overflow-hidden border",
         "hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
-        "font-sourceSerif text-muted-foreground dark:text-muted-invert",
+        "font-mono text-muted-foreground dark:text-muted-invert",
         "transition-all duration-300 ease-out h-full",
         "hover:-translate-y-1 hover:scale-[1.02]",
         "bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800",
@@ -77,11 +77,11 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base font-sourceSerif group-hover:text-white-600 dark:group-hover:text-blue-400 transition-colors">
+          <CardTitle className="mt-1 text-base font-mono group-hover:text-white-600 dark:group-hover:text-blue-400 transition-colors">
             {title}
           </CardTitle>
           <time className="font-sourceSerif text-xs opacity-70">{dates}</time>
-          <div className="hidden  font-jetbrains text-xs underline print:visible">
+          <div className="hidden  font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
           <Markdown className="prose max-w-full  font-jetbrains text-pretty text-xs text-muted-foreground dark:prose-invert">
@@ -89,7 +89,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex  font-jetbrains flex-col px-2">
+      <CardContent className="mt-auto flex  font-mono flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (

@@ -64,6 +64,7 @@ const config = {
         wavy: "wavy",
       },
       fontFamily: {
+        mono: ["JetBrainsMono", "monospace"],
         chewy: ["Chewy", "cursive"],
         jetbrains: ["JetBrains Mono", "monospace"],
         playwriteFR: ['"Playwrite FR Moderne"'],

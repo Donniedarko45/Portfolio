@@ -78,12 +78,12 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="font-jetbrains text-22px font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
+                className="font-mono text-xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] font-jetbrains py-8px  text-normal  md:text-xl"
+                className="max-w-[600px] font-mono py-8px  text-normal  md:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -112,7 +112,7 @@ export default function Page() {
         animate={scrollControls}
       >
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl underline font-jetbrains  font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
+          <h2 className="text-xl underline font-mono  font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
             About
           </h2>
         </BlurFade>
@@ -132,7 +132,7 @@ export default function Page() {
       >
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold  font-jetbrains  underline decoration-gray-500 [text-decoration-style:wavy]">
+            <h2 className="text-xl font-bold  font-mono  underline decoration-gray-500 [text-decoration-style:wavy]">
               Work Experience
             </h2>
           </BlurFade>
@@ -196,7 +196,7 @@ export default function Page() {
         viewport={{ once: true, amount: 0.3 }}
         animate={scrollControls}
       >
-        <h2 className="text-xl font-bold font-jetbrains  underline decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-xl font-bold font-mono  underline decoration-gray-500 [text-decoration-style:wavy]">
           Skills
         </h2>
         <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-20 pb-20 pt-8 ">
