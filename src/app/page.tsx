@@ -123,13 +123,13 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="prose max-w-full py-10px  font-mono text-normal dark:prose-invert">
+          <div className="prose max-w-full font-mono text-sm leading-relaxed sm:text-base dark:prose-invert">
             🌱 I’m currently learning about DevOps and GenAI.
             <br />
-            🌐 currently working on a project that writes blogs and project docs
-            generally helpful for students and was able to pass zerogpt and
-            turnitin.
-            <hr />
+            🌐 Currently working on a project that writes blogs and project docs
+            generally helpful for students and will be able to pass ZeroGPT and
+            Turnitin.
+            <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
           </div>
         </BlurFade>
       </motion.section>
