@@ -87,7 +87,7 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="your@email.com" {...field} />
               </FormControl>
-              <FormDescription className=" font-jetbrains">
+              <FormDescription className=" font-mono">
                 I'll never share your email with anyone else.
               </FormDescription>
               <FormMessage />

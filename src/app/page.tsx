@@ -114,7 +114,7 @@ export default function Page() {
         animate={scrollControls}
       >
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl underline font-mono  font-bold underline decoration-gray-500 [text-decoration-style:wavy]">
+          <h2 className="text-xl font-mono  font-bold decoration-gray-500 [text-decoration-style:wavy]">
             About
           </h2>
         </BlurFade>
