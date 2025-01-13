@@ -1,5 +1,7 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { describe } from "node:test";
+import { type } from "os";
 
 export const DATA = {
   name: "Kartikey Pandey",
@@ -117,8 +119,13 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/Donniedarko45/Portfolio",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "donniedarko.tech",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -181,6 +188,27 @@ export const DATA = {
         },
       ],
       image: "/yt.png",
+    },
+    {
+      title: "Shayari Generator",
+      dates: "December 2024",
+      active: true,
+      description:
+        "developed a shayri generator app using Next js and and Mistral model for generating shayri as per users input. works well on completing the unfinished shayri.",
+      technologies: ["Next.js", "Typescript", "TailwindCSS", "Mistral API"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Donniedarko45/ShayariGenerator",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://shayari-generator-eosin.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Shayari.png",
     },
   ],
   hackathons: [

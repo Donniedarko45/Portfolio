@@ -125,6 +125,10 @@ export default function Page() {
           <br />
           <div className="prose max-w-full py-10px  font-mono text-normal dark:prose-invert">
             🌱 I’m currently learning about DevOps and GenAI.
+            <br />
+            🌐 currently working on a project that writes blogs and project docs
+            generally helpful for students and was able to pass zerogpt and
+            turnitin😅.
             <hr />
           </div>
         </BlurFade>
