@@ -128,7 +128,7 @@ export default function Page() {
             <br />
             🌐 currently working on a project that writes blogs and project docs
             generally helpful for students and was able to pass zerogpt and
-            turnitin😅.
+            turnitin.
             <hr />
           </div>
         </BlurFade>
