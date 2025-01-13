@@ -125,7 +125,7 @@ export const DATA = {
         },
         {
           type: "Website",
-          href: "donniedarko.tech",
+          href: "https://www.donniedarko.tech/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -155,7 +155,7 @@ export const DATA = {
       ],
       image: "/agro.png",
     },
-    {
+    /* {
       title: "Food Villa",
       href: "https://github.com/Donniedarko45/React",
       dates: "May 2024 - September 2024",
@@ -171,7 +171,7 @@ export const DATA = {
         },
       ],
       image: "/food.png",
-    },
+    },*/
     {
       title: "Youtube-Backend",
       href: "",
