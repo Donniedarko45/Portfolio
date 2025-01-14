@@ -226,10 +226,10 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
-                <h2 className="text-3xl font-bold font-jetbrains  tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold font-mono tracking-tighter sm:text-5xl">
                   <Cover> Check out my latest work </Cover>
                 </h2>
                 <p className="text-muted-foreground font-mono  ">
@@ -240,7 +240,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 font-jetbrains  gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 font-mono  gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
@@ -274,7 +274,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold  tracking-tighter sm:text-5xl">
@@ -290,7 +290,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 font-jetbrainsdivide-y divide-dashed border-l">
+            <ul className="mb-4 ml-4 font-mono divide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade
                   key={project.title + project.dates}
@@ -321,10 +321,10 @@ export default function Page() {
         <div className="container mx-auto py-10">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block font-jetbrains rounded-lg bg-foreground text-background px-3 py-1 text-sm text-center">
+              <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm text-center">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter font-jetbrainssm:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-mono sm:text-5xl">
                 Get in Touch
               </h2>
               <ContactForm />
