@@ -89,8 +89,8 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border-4 border-gray-500 shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
-                <div className="absolute inset-0 animate-ripple rounded-full border-4 border-gray-500/50"></div>
+              <Avatar className="size-28 border-4 ring-rose-600  shadow-lg rounded-full flex items-center justify-center overflow-hidden relative">
+                <div className="absolute inset-0 animate-ripple rounded-full border-4 ring-rose-600"></div>
 
                 <AvatarImage
                   alt={DATA.name}
