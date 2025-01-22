@@ -123,18 +123,16 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="flex justify-center rounded-lg  items-center bg-gray-100 dark:bg-black p-4">
-            <div className="relative w-full max-w-2xl h-48 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden">
-              <div className="absolute inset-0 border-4 border-transparent animate-border-flow rounded-lg"></div>
-              <div className="relative h-full flex items-center p-6">
-                <div className="prose dark:prose-invert font-mono text-sm sm:text-base leading-relaxed">
-                  🌱 I'm currently learning about DevOps and GenAI.
-                  <br />
-                  🌐 Currently working on a project that writes blogs and
-                  project docs generally helpful for students and will be able
-                  to pass ZeroGPT and Turnitin.
-                  <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
-                </div>
+          <div className="relative w-full max-w-2xl h-48 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden">
+            <div className="absolute inset-0 border-4 border-transparent animate-border-flow rounded-lg"></div>
+            <div className="relative h-full flex items-center p-6">
+              <div className="prose dark:prose-invert font-mono text-sm sm:text-base leading-relaxed">
+                🌱 I'm currently learning about DevOps and GenAI.
+                <br />
+                🌐 Currently working on a project that writes blogs and project
+                docs generally helpful for students and will be able to pass
+                ZeroGPT and Turnitin.
+                <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
               </div>
             </div>
             <style jsx>{`
