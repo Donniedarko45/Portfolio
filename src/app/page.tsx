@@ -123,7 +123,7 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-900 p-4">
+          <div className="flex justify-center rounded-lg  items-center bg-gray-100 dark:bg-black p-4">
             <div className="relative w-full max-w-2xl h-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
               <div className="absolute inset-0 border-4 border-transparent animate-border-flow rounded-lg"></div>
               <div className="relative h-full flex items-center p-6">
