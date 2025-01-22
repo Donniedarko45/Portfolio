@@ -123,10 +123,10 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="relative w-full max-w-2xl h-48 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden">
+          <div className="relative w-full max-w-3xl h-48 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden">
             <div className="absolute inset-0 border-4 border-transparent animate-border-flow rounded-lg"></div>
             <div className="relative h-full flex items-center p-6">
-              <div className="prose dark:prose-invert font-mono text-sm sm:text-base leading-relaxed">
+              <div className="prose dark:prose-invert font-mono text-sm mt-2  sm:text-base leading-relaxed">
                 🌱 I'm currently learning about DevOps and GenAI.
                 <br />
                 🌐 Currently working on a project that writes blogs and project
@@ -135,51 +135,6 @@ export default function Page() {
                 <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
               </div>
             </div>
-            <style jsx>{`
-              @keyframes border-flow {
-                0% {
-                  background-image: linear-gradient(
-                      90deg,
-                      #031e4b 50%,
-                      transparent 50%
-                    ),
-                    linear-gradient(90deg, transparent 50%, #02112b 50%),
-                    linear-gradient(0deg, transparent 50%, #00040b 50%),
-                    linear-gradient(0deg, #000a1c 50%, transparent 50%);
-                  background-position:
-                    0% 0%,
-                    0% 100%,
-                    0% 0%,
-                    100% 0%;
-                  background-size:
-                    200% 4px,
-                    200% 4px,
-                    4px 200%,
-                    4px 200%;
-                }
-                100% {
-                  background-image:
-                    linear-gradient(90deg, #00040b 50%, transparent 50%),
-                    linear-gradient(90deg, transparent 50%, #010e23 50%),
-                    linear-gradient(0deg, transparent 50%, #02112b 50%),
-                    </div> linear-gradient(0deg, #000000 50%, transparent 50%);
-                  background-position:
-                    200% 0%,
-                    -200% 100%,
-                    0% 200%,
-                    100% -200%;
-                  background-size:
-                    200% 4px,
-                    200% 4px,
-                    4px 200%,
-                    4px 200%;
-                }
-              }
-
-              .animate-border-flow {
-                animation: border-flow 4s linear infinite;
-              }
-            `}</style>
           </div>{" "}
         </BlurFade>
       </motion.section>
