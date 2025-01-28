@@ -1,17 +1,18 @@
 "use client";
+
+import { ContactForm } from "../components/contact-us";
+import { Cover } from "../components/ui/cover";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { IconCloud } from "@/components/magicui/interactiveCloud";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
-import Markdown from "react-markdown";
-import { ContactForm } from "../components/contact-us";
-import { IconCloud } from "@/components/magicui/interactiveCloud";
-import { Cover } from "../components/ui/cover";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import Markdown from "react-markdown";
 
 function useScrollAnimation() {
   const controls = useAnimation();
@@ -78,7 +79,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="font-mono text-xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none"
+                className="font-mono text-xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none text-slate-400"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -123,19 +124,13 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="relative w-full max-w-3xl h-48 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden">
-            <div className="absolute inset-0 border-4 border-transparent animate-border-flow rounded-lg"></div>
-            <div className="relative h-full flex items-center p-6">
-              <div className="prose dark:prose-invert font-mono text-sm mt-2  sm:text-base leading-relaxed">
-                🌱 I'm currently learning about DevOps and GenAI.
-                <br />
-                🌐 Currently working on a project that writes blogs and project
-                docs generally helpful for students and will be able to pass
-                ZeroGPT and Turnitin.
-                <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
-              </div>
-            </div>
-          </div>{" "}
+          <div className="relative text-white  h-full flex items-center">
+            🌱 I'm currently learning about DevOps and GenAI.
+            <br />
+            🌐 Currently working on a project that writes blogs and project docs
+            generally helpful for students and will be able to pass ZeroGPT and
+            Turnitin.
+          </div>
         </BlurFade>
       </motion.section>
       <motion.section
