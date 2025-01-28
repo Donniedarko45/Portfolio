@@ -10,7 +10,9 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
+import { animate } from "@tsparticles/engine";
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 import { useEffect } from "react";
 import Markdown from "react-markdown";
 
@@ -106,6 +108,11 @@ export default function Page() {
           </div>
         </div>
       </motion.section>
+      <div className="text-center animate-pulse  font-semibold drop-shadow-glow  rounded-full underline">
+        <Link href="/blog">
+          <>checkout my latest blogs --{">"}</>
+        </Link>
+      </div>
       <motion.section
         id="about"
         initial={{ opacity: 0, y: 50 }}
@@ -119,17 +126,15 @@ export default function Page() {
             About
           </h2>
         </BlurFade>
+
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full font-mono text-normal text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
           <br />
-          <div className="relative text-white  h-full flex items-center">
+          <div className="relative  h-full flex items-center">
             🌱 I'm currently learning about DevOps and GenAI.
             <br />
-            🌐 Currently working on a project that writes blogs and project docs
-            generally helpful for students and will be able to pass ZeroGPT and
-            Turnitin.
           </div>
         </BlurFade>
       </motion.section>
@@ -230,7 +235,7 @@ export default function Page() {
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold font-mono tracking-tighter sm:text-5xl">
-                  <Cover> Check out my latest work </Cover>
+                  <Cover className="text-3xl"> Check out my latest work </Cover>
                 </h2>
                 <p className="text-muted-foreground font-mono  ">
                   I&apos;ve worked on a variety of projects, from simple
@@ -262,7 +267,7 @@ export default function Page() {
           </div>
         </div>
       </motion.section>
-      <motion.section
+      {/* <motion.section
         id="hackathons"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -289,7 +294,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+         <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 font-mono divide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade
@@ -309,7 +314,7 @@ export default function Page() {
             </ul>
           </BlurFade>
         </div>
-      </motion.section>
+      </motion.section>          */}
       <motion.section
         id="contact"
         initial={{ opacity: 0, y: 50 }}
