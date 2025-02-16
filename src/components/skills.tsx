@@ -1,5 +1,4 @@
 import React from "react";
-import { DATA } from "@/data/resume";
 
 const skills = [
   "Javascript",
@@ -19,7 +18,7 @@ const skills = [
 export const Skills = () => {
   return (
     <div>
-      <div className="text-xl text-gray-400">Skills</div>
+      <div className="text-xl font-bold  text-gray-400">Skills</div>
       <div className="flex flex-wrap justify-center">
         {skills.map((skill) => (
           <div
