@@ -4,14 +4,14 @@ import { ContactForm } from "../components/contact-us";
 import { HackathonCard } from "@/components/hackathon-card";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import Skills from "@/components/skills";
+import { Skills } from "@/components/skills";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 
 export default function Page() {
   return (
-    <div>
+    <div className="text-gray-400">
       <div className="mx-auto w-full max-w-2xl space-y-8">
         <div className="gap-2 flex justify-between">
           <div className="flex-col flex flex-1 space-y-1.5">
@@ -52,8 +52,8 @@ export default function Page() {
         <br />
       </div>
 
-      <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-xl font-bold  font-mono  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
+      <div className="flex min-h-0 text-gray-400 flex-col gap-y-3">
+        <h2 className="text-xl font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
           Work Experience
         </h2>
         {DATA.work.map((work) => (
@@ -72,7 +72,7 @@ export default function Page() {
       </div>
 
       <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-xl font-bold underline mt-6 mb-2  decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-xl font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
           Education
         </h2>
         {DATA.education.map((education) => (
@@ -118,14 +118,14 @@ export default function Page() {
         </div>
       </div>
       <div className="space-y-12 w-full py-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center text-gray-300  space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+            <div className="inline-block font-mono rounded-lg bg-foreground text-gray-300  text-background px-3 py-1 text-sm">
               Hackathons
             </div>
           </div>
         </div>
-        <ul className="mb-4 ml-4 font-mono divide-y divide-dashed border-l">
+        <ul className="mb-4 ml-4 font-mono divide-y divide-dashed text-gray-300 border-l">
           {DATA.hackathons.map((project) => (
             <HackathonCard
               title={project.title}
@@ -141,7 +141,7 @@ export default function Page() {
 
       <div className="container mx-auto py-10">
         <div className="space-y-3">
-          <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm text-center">
+          <div className="inline-block font-mono rounded-lg  bg-foreground text-background px-3 py-1 text-sm text-center">
             Contact
           </div>
           <h2 className="text-3xl font-bold tracking-tighter font-mono sm:text-5xl">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./ui/button";
+import { DATA } from "@/data/resume";
 
 const skills = [
   "Javascript",
@@ -16,22 +16,20 @@ const skills = [
   "C++",
 ];
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <div>
-      <h1 className="text-xl font-bold decoration-gray-500">Skills</h1>
-      <ul className="flex flex-wrap gap-2">
+      <div className="text-xl text-gray-400">Skills</div>
+      <div className="flex flex-wrap justify-center">
         {skills.map((skill) => (
-          <Button
-            className="bg-white text-black dark:bg-black dark:text-white"
+          <div
             key={skill}
+            className="m-2 p-2 dark:bg-black bg-white rounded-lg font-mono"
           >
             {skill}
-          </Button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
-
-export default Skills;
