@@ -105,7 +105,7 @@ export const DATA = {
   projects: [
     {
       title: "Portfolio",
-      href: "",
+      href: "donniedarko.tech",
       dates: "December 2024",
       active: true,
       description:

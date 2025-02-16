@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -76,7 +75,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" font-mono space-y-8"
+        className=" font-mono space-y-5"
       >
         <FormField
           control={form.control}
@@ -85,11 +84,9 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your@email.com" {...field} />
+                <Input placeholder="" {...field} />
               </FormControl>
-              <FormDescription className=" font-mono">
-                I'll never share your email with anyone else.
-              </FormDescription>
+
               <FormMessage />
             </FormItem>
           )}
@@ -101,11 +98,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className=" font-mono">Your Message</FormLabel>
               <FormControl>
-                <Textarea
-                  placeholder="Type your message here."
-                  className="resize-none  font-mono"
-                  {...field}
-                />
+                <Textarea className="resize-none  font-mono" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

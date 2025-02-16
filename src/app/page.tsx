@@ -8,6 +8,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { IconCloud } from "@/components/magicui/interactiveCloud";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import Skills from "@/components/skills";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import { animate } from "@tsparticles/engine";
@@ -108,11 +109,7 @@ export default function Page() {
           </div>
         </div>
       </motion.section>
-      <div className="text-center animate-pulse  font-semibold drop-shadow-glow  rounded-full underline">
-        <Link href="/blog">
-          <>checkout my latest blogs --{">"}</>
-        </Link>
-      </div>
+
       <motion.section
         id="about"
         initial={{ opacity: 0, y: 50 }}
@@ -205,19 +202,14 @@ export default function Page() {
         </div>
       </motion.section>
       <motion.section
-        id="skill"
+        id="skills"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
         animate={scrollControls}
       >
-        <h2 className="text-xl font-bold font-mono  underline decoration-gray-500 [text-decoration-style:wavy]">
-          Skills
-        </h2>
-        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden bg-background px-20 pb-20 pt-8 ">
-          <IconCloud iconSlugs={slugs} />
-        </div>
+        <Skills />
       </motion.section>
       <motion.section
         id="projects"
@@ -234,9 +226,6 @@ export default function Page() {
                 <div className="inline-block font-mono rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
-                <h2 className="text-3xl font-bold font-mono tracking-tighter sm:text-5xl">
-                  <Cover className="text-3xl"> Check out my latest work </Cover>
-                </h2>
                 <p className="text-muted-foreground font-mono  ">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
@@ -252,7 +241,6 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ProjectCard
-                  href={project.href}
                   key={project.title}
                   title={project.title}
                   description={project.description}
