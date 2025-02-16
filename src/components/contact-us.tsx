@@ -1,4 +1,5 @@
 "use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -59,6 +61,7 @@ export function ContactForm() {
         description: "Thank you for your message. I'll get back to you soon.",
       });
 
+      // Reset form
       form.reset();
     } catch (error) {
       toast({
@@ -75,7 +78,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" font-mono space-y-5"
+        className=" font-mono space-y-8"
       >
         <FormField
           control={form.control}
@@ -84,9 +87,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} />
+                <Input placeholder="your@email.com" {...field} />
               </FormControl>
-
+              <FormDescription className=" font-jetbrains">
+                I'll never share your email with anyone else.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -98,7 +103,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className=" font-mono">Your Message</FormLabel>
               <FormControl>
-                <Textarea className="resize-none  font-mono" {...field} />
+                <Textarea
+                  placeholder="Type your message here."
+                  className="resize-none  font-mono"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
