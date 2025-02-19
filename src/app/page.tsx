@@ -15,11 +15,11 @@ export default function Page() {
       <div className="mx-auto w-full max-w-2xl space-y-8">
         <div className="gap-2 flex justify-between">
           <div className="flex-col flex flex-1 space-y-1.5">
-            <div className="font-mono text-xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none text-slate-400">
+            <div className="font-mono text-base font-bold tracking-tighter sm:text-3xl xl:text-4xl/none text-slate-400">
               {" "}
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </div>
-            <div className="max-w-[600px] font-mono py-8px text-normal md:text-xl">
+            <div className="max-w-[600px] font-mono py-8px text-sm md:text-base">
               {" "}
               {DATA.description}
             </div>
@@ -32,28 +32,28 @@ export default function Page() {
               src={DATA.avatarUrl}
               className="w-full h-full object-cover z-10"
             />
-            <AvatarFallback className="text-gray-700 text-lg font-semibold bg-gray-200 flex items-center justify-center w-full h-full z-10">
+            <AvatarFallback className="text-gray-700 text-base font-semibold bg-gray-200 flex items-center justify-center w-full h-full z-10">
               {DATA.initials}
             </AvatarFallback>
           </Avatar>{" "}
         </div>
       </div>
 
-      <h2 className="text-xl font-mono  font-bold decoration-gray-500 [text-decoration-style:wavy]">
+      <h2 className="text-base font-mono  font-bold decoration-gray-500 [text-decoration-style:wavy]">
         About
       </h2>
 
-      <Markdown className="prose max-w-full font-mono text-normal text-muted-foreground dark:prose-invert">
+      <Markdown className="prose max-w-full font-mono text-base text-muted-foreground dark:prose-invert">
         {DATA.summary}
       </Markdown>
       <br />
-      <div className="relative mb-4  h-full flex items-center">
+      <div className="relative mb-4 text-base  h-full flex items-center">
         🌱 I'm currently learning about DevOps and GenAI.
         <br />
       </div>
 
       <div className="flex min-h-0 text-gray-400 flex-col gap-y-3">
-        <h2 className="text-xl font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-sm font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
           Work Experience
         </h2>
         {DATA.work.map((work) => (
@@ -72,7 +72,7 @@ export default function Page() {
       </div>
 
       <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-xl font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-lg font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
           Education
         </h2>
         {DATA.education.map((education) => (
@@ -120,7 +120,7 @@ export default function Page() {
       <div className="space-y-12 w-full py-6">
         <div className="flex flex-col items-center justify-center text-gray-300  space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block font-mono rounded-lg bg-foreground text-gray-300  text-background px-3 py-1 text-sm">
+            <div className="inline-block font-mono rounded-lg bg-foreground text-black  text-background px-3 py-1 text-sm">
               Hackathons
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Page() {
           <div className="inline-block font-mono rounded-lg  bg-foreground text-background px-3 py-1 text-sm text-center">
             Contact
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter font-mono sm:text-5xl">
+          <h2 className="text-2xl font-bold tracking-tighter font-mono sm:text-4xl">
             Get in Touch
           </h2>
           <ContactForm />

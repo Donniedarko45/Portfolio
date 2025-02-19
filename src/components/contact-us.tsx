@@ -66,7 +66,7 @@ export function ContactForm() {
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: "Failed to send message.  Please try again later.",
         variant: "destructive",
       });
     } finally {
