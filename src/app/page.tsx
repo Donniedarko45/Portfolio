@@ -53,7 +53,7 @@ export default function Page() {
       </div>
 
       <div className="flex min-h-0 text-gray-400 flex-col gap-y-3">
-        <h2 className="text-sm font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-base font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
           Work Experience
         </h2>
         {DATA.work.map((work) => (
@@ -72,7 +72,7 @@ export default function Page() {
       </div>
 
       <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-lg font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-base font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
           Education
         </h2>
         {DATA.education.map((education) => (
@@ -87,7 +87,7 @@ export default function Page() {
           />
         ))}
       </div>
-      <div className="mt-6 mb-2">
+      <div className="mt-6 text-base  mb-2">
         <Skills />
       </div>
       <div className="space-y-12 w-full py-12">

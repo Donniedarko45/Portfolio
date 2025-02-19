@@ -18,12 +18,12 @@ const skills = [
 export const Skills = () => {
   return (
     <div>
-      <div className="text-xl font-bold  text-gray-400">Skills</div>
-      <div className="flex flex-wrap justify-center">
+      <div className="text-base font-bold  text-gray-400">Skills</div>
+      <div className="flex flex-wrap text-base  justify-center">
         {skills.map((skill) => (
           <div
             key={skill}
-            className="m-2 p-2 dark:bg-black bg-white rounded-lg font-mono"
+            className="m-2 p-2 dark:bg-black text-base  bg-white rounded-lg font-mono"
           >
             {skill}
           </div>
