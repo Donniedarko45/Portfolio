@@ -1,5 +1,5 @@
 "use client";
-
+import { IconCloud } from "@/components/magicui/interactiveCloud";
 import { AnimatedBeamDemo } from "@/components/animated-beam";
 import { ContactForm } from "../components/contact-us";
 import { HackathonCard } from "@/components/hackathon-card";
@@ -9,6 +9,39 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+  "neovim",
+  "c",
+  "c++",
+  "python",
+];
+
+
 
 export default function Page() {
   return (
@@ -92,7 +125,7 @@ export default function Page() {
         <div className="text-base font-bold   underline mt-6 mb-2 text-gray-500  decoration-gray-500 [text-decoration-style:wavy]">
           Skills
         </div>
-        <IconCloudDemo />
+        <IconCloud iconSlugs={slugs} />
       </div>
       <div className="space-y-12 w-full py-12">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
