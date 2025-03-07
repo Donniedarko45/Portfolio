@@ -92,7 +92,7 @@ export default function Page() {
         <div className="text-base font-bold   underline mt-6 mb-2 text-gray-500  decoration-gray-500 [text-decoration-style:wavy]">
           Skills
         </div>
-        <IconCloudDemo /> <AnimatedBeamDemo />
+        <IconCloudDemo />
       </div>
       <div className="space-y-12 w-full py-12">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
