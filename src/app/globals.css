@@ -251,3 +251,14 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   text-decoration: underline;
   color: #32cd32; /* LimeGreen color */
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

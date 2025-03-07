@@ -1,10 +1,11 @@
 "use client";
 
+import { AnimatedBeamDemo } from "@/components/animated-beam";
 import { ContactForm } from "../components/contact-us";
 import { HackathonCard } from "@/components/hackathon-card";
+import { IconCloudDemo } from "@/components/icon-cloud";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import { Skills } from "@/components/skills";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
@@ -52,8 +53,8 @@ export default function Page() {
         <br />
       </div>
 
-      <div className="flex min-h-0 text-gray-400 flex-col gap-y-3">
-        <h2 className="text-base font-bold  font-mono text-gray-400  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
+      <div className="flex min-h-0 text-gray-500 flex-col gap-y-3">
+        <h2 className="text-base font-bold  font-mono text-gray-500  mb-1  underline decoration-gray-500 [text-decoration-style:wavy]">
           Work Experience
         </h2>
         {DATA.work.map((work) => (
@@ -72,7 +73,7 @@ export default function Page() {
       </div>
 
       <div className="flex min-h-0 flex-col gap-y-3">
-        <h2 className="text-base font-bold underline mt-6 mb-2 text-gray-400  decoration-gray-500 [text-decoration-style:wavy]">
+        <h2 className="text-base font-bold underline mt-6 mb-2 text-gray-500  decoration-gray-500 [text-decoration-style:wavy]">
           Education
         </h2>
         {DATA.education.map((education) => (
@@ -88,7 +89,10 @@ export default function Page() {
         ))}
       </div>
       <div className="mt-6 text-base  mb-2">
-        <Skills />
+        <div className="text-base font-bold   underline mt-6 mb-2 text-gray-500  decoration-gray-500 [text-decoration-style:wavy]">
+          Skills
+        </div>
+        <IconCloudDemo /> <AnimatedBeamDemo />
       </div>
       <div className="space-y-12 w-full py-12">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -117,6 +121,7 @@ export default function Page() {
           ))}
         </div>
       </div>
+      {/*
       <div className="space-y-12 w-full py-6">
         <div className="flex flex-col items-center justify-center text-gray-300  space-y-4 text-center">
           <div className="space-y-2">
@@ -133,12 +138,12 @@ export default function Page() {
               location={project.location}
               dates={project.dates}
               image={project.image}
-              // links={project.links}
+            // links={project.links}
             />
           ))}
         </ul>
       </div>
-
+      */}
       <div className="container mx-auto py-10">
         <div className="space-y-3">
           <div className="inline-block font-mono rounded-lg  bg-foreground text-background px-3 py-1 text-sm text-center">
